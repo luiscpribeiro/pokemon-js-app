@@ -13,9 +13,9 @@ let pokemonList = [
 function printPokemonList(){
   for (let i = 0; i < pokemonList.length; i++) {
     if (pokemonList[i].height > 1.7) {
-      document.write(pokemonList[i].name + " <strong>is huge!</strong> (height: " + pokemonList[i].height + ")<br>");
+      document.write("<p>" + pokemonList[i].name + " <strong>is huge!</strong> (height: " + pokemonList[i].height + ")</p>");
     } else {
-      document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ")<br>");
+      document.write("<p>" + pokemonList[i].name + " (height: " + pokemonList[i].height + ")</p>");
     }
   }
 }
