@@ -12,7 +12,11 @@ let pokemonRepository = (function () {
   ];
 
   function add(item) {
-    pokemonList.push(item);
+    if (typeof item === 'object') {
+      pokemonList.push(item);
+    } else {
+      document.write('<p>Error adding new pokemon</p><hr>');
+    }
   }
 
   function getAll() {
