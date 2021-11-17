@@ -55,5 +55,5 @@ function printPokemon(pokemon) {
   pokemonRepository.addListItem(pokemon);
 }
 
-pokemonRepository.add({name: 'Pikachu', type:['Eletric'], height:0.4});
+pokemonRepository.add({name: 'Pikachu', type: ['Eletric'], height: 0.4});
 pokemonRepository.getAll().forEach(printPokemon);
