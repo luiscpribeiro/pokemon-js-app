@@ -1,6 +1,6 @@
 .selected {
   background-color: white;
-  padding: 16px 32px;
+  padding: 1em;
   text-align: center;
   font-size: 16px;
   margin: 4px 2px;
@@ -8,10 +8,28 @@
   cursor: pointer;
   border: 2px solid #4caf50;
   width: 200px;
-  border-radius: 5px;
+  border-radius: 1em;
 }
 
 .selected:hover {
   background-color: #4caf50;
   color: white;
+}
+
+.loading {
+  display: none;
+}
+
+.loading.visible {
+  display: inline-block;
+  background: black;
+  border: 2px solid #4caf50;
+  color: white;
+  border-radius: 1em;
+  padding: 1em;
+  position: sticky;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  float: right;
 }
