@@ -15,6 +15,7 @@
 	width: 30%;
   font-size: 18px;
   text-transform: capitalize;
+  list-style: none;
 }
 
 .pokemon-button {
