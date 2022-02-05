@@ -61,16 +61,16 @@ let pokemonRepository = (function () {
 
   function addListItem(pokemon) {
       let pokemonList = document.querySelector('.pokemon-list');
-      let listItem = document.createElement('div');
+      let listItem = document.createElement('li');
       // let listImg = document.createElement('img');
       let button = document.createElement('button');
       let breakLine = document.createElement('br');
       // listItem.innerText = ('#' + pokemon.id + ' ' + pokemon.name);
       listItem.innerText = (pokemon.name);
       // listImg.src = pokemon.imgUrlFront;
-      listItem.classList.add('pokemon-item');
+      listItem.classList.add('pokemon-item', 'group-list-item');
       button.innerText = ('Details');
-      button.classList.add('pokemon-button', 'group-list-item', 'btn', 'btn-primary');
+      button.classList.add('pokemon-button', 'btn', 'btn-primary');
       pokemonList.appendChild(listItem);
       // listItem.appendChild(listImg);
       listItem.appendChild(breakLine);
@@ -129,14 +129,24 @@ let pokemonRepository = (function () {
 
     let pokemonDetails = document.createElement ('p');
 
+    function round(value, precision) {
+      var multiplier = Math.pow(10, precision || 0);
+      return Math.round(value * multiplier) / multiplier;
+    }
+
+    let pokemonHeight = pokemon.height * 0.1;
+    pokemonHeight = round(pokemonHeight, 1);
+    let pokemonWeight = pokemon.weight * 0.1;
+    pokemonWeight = round(pokemonWeight, 1);
+
     modal.appendChild(closeButtonElement);
     modal.appendChild(titleElement);
     modal.appendChild(imgElementFront);
     modal.appendChild(imgElementBack);
     modal.appendChild(pokemonDetails);
     pokemonDetails.innerHTML += ('<br>ID: #' + pokemon.id);
-    pokemonDetails.innerHTML += ('<br>Height: ' + pokemon.height + ' (dm)');
-    pokemonDetails.innerHTML += ('<br>Weight: ' + pokemon.weight + ' (hg)');
+    pokemonDetails.innerHTML += ('<br>Height: ' + pokemonHeight + ' (m)');
+    pokemonDetails.innerHTML += ('<br>Weight: ' + pokemonWeight + ' (kg)');
     pokemonDetails.innerHTML += ('<br>Type: ' + pokemon.types);
     modalContainer.appendChild(modal);
 
