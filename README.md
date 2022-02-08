@@ -1,3 +1,3 @@
-Future Pokedex App in JS
+Pokedex App using jQuery and Bootstrap
 
-Check https://pokedex.org/ for pokémon information
+Loads the first 150 pokemon information from an external API.
